@@ -33,7 +33,7 @@
 	<div id="tb">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:showFormPage('新增用户','add','/user/showAddView')">增加</a>
 		<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:showFormPage('修改用户','edit','/user/showEditView')">修改</a>
-		<a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="javascript:delete()">删除</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="javascript:deleteRecord('/user/delete')">删除</a>
 	</div>
 	<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
 		closed="true" buttons="#dlg-buttons"></div>

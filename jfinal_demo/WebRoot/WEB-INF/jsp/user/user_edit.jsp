@@ -8,33 +8,30 @@
 <script type="text/javascript" src="../../../js/jquery-easyui-1.4.4/jquery.min.js"></script>
 <script type="text/javascript" src="../../../js/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="../../../js/main.js"></script>
-<script type="text/javascript" src="../../../js/user/user.js"></script>
-<script type="text/javascript">
-$(function(){
-	var loadData = {};
-	$('#fm').form('load',{"user.password":"123456","user.sex":"男","user.name":"dfasdf","user.id":2,"user.userName"
-		:"sdd","user.email":"dd@cc.c","user.content":"asdfasfd"});
-}); 
-</script>
+<script type="text/javascript" src="../../../js/user/js"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>修改用户</title>
 </head>
 <body>
 	<div style="width:90%">
-		<form id="fm" method="post" name="fm" action="user/add">
+		<form id="fm" method="post" name="fm" action="user/edit">
 			<table cellpadding="5">
 				<tr>
 	    			<td>用户名:</td>
-	    			<td><input class="easyui-textbox" type="text" name="user.userName" data-options="required:true"></input></td>
+	    			<td>
+	    			<input type="hidden" name="user.id" value="${user.id }"></input>
+	    			<input class="easyui-textbox" type="text" name="user.userName" value="${user.userName }"data-options="required:true"></input>
+	    			</td>
 	    		</tr>
 	    		<tr>
 	    			<td>姓名:</td>
-	    			<td><input class="easyui-textbox" type="text" name="user.name" data-options="required:true"></input></td>
+	    			<td><input class="easyui-textbox" type="text" name="user.name" value="${user.name }"data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td>性别:</td>
 	    			<td>
-	    			<select name="user.sex">
+	    			<select name="user.sex" >
 						<option value="男">男</option>
 						<option value="女">女</option>
 					</select>
@@ -42,11 +39,11 @@ $(function(){
 	    		</tr>
 	    		<tr>
 	    			<td>Email:</td>
-	    			<td><input class="easyui-textbox" type="text" name="user.email" data-options="required:true,validType:'email'"></input></td>
+	    			<td><input class="easyui-textbox" type="text" name="user.email" value="${user.email }" data-options="required:true,validType:'email'"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td>备注:</td>
-	    			<td><textarea rows="10" cols="50" name="user.content"></textarea></td>
+	    			<td><textarea rows="10" cols="50" name="user.content">${user.content}</textarea></td>
 	    		</tr>
 	    		
 	    	</table>

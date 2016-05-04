@@ -37,22 +37,19 @@ public class UserController extends Controller {
     }
     
     public void showEditView() {
-        setAttr("user", JsonKit.toJson(User.me.findById(getParaToInt("id"))));
+        //setAttr("user", JsonKit.toJson(User.me.findById(getParaToInt("id"))));
+        setAttr("user", User.me.findById(getParaToInt("id")));
         render("user_edit.jsp");
     }
 
-    public void edit() {
-        setAttr("User", User.me.findById(getParaToInt()));
-    }
-
     @Before(UserValidator.class)
-    public void update() {
+    public void edit() {
         getModel(User.class).update();
-        redirect("/User");
+        renderText(JsonKit.toJson(new Result()));
     }
 
     public void delete() {
-        User.me.deleteById(getParaToInt());
-        redirect("/User");
+        User.me.deleteById(getParaToInt("id"));
+        renderText(JsonKit.toJson(new Result()));
     }
 }
