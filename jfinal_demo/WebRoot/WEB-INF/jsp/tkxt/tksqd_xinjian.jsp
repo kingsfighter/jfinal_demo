@@ -9,6 +9,7 @@
 <script type="text/javascript" src="../../../js/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="../../../js/main.js"></script>
 <script type="text/javascript" src="../../../js/user/user.js"></script>
+<script type="text/javascript"  language="javascript" src="../../../js/My97DatePicker_now/WdatePicker.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>新增用户</title>
 </head>
