@@ -10,21 +10,33 @@
 <script type="text/javascript" src="../../../js/main.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>首页</title>
+<script type="text/javascript">
+	$(document).ready(function(){  
+		 $('#tt').datagrid({
+			 onClickRow: function(index, data) {
+		            var row = $('#tt').datagrid('getSelected');
+		            $("#selectedId").val(row.id);
+			 }
+		 });
+	}); 
+</script>
 </head>
 <body>
-	<table id="tt" class="easyui-datagrid" style="width: 80%; height: auto;" url="/tkxt/list" rownumbers="true" pagination="true">
+	<table id="tt" class="easyui-datagrid" style="width: 95%; height: auto;" singleSelect="true" url="/tkxt/list" rownumbers="true" pagination="true">
 		<thead>
 			<tr>
 				<th field="id" width="80">申请单号</th>
-				<th field="userName" width="100">申请人</th>
-				<th field="name" width="150">勘查单位</th>
-				<th field="sex" width="200">勘查资格证号</th>
-				<th field="email" width="200">勘查单位地址</th>
-				<th field="content" width="100">申请时间</th>
+				<th field="sqr" width="100">申请人</th>
+				<th field="sqdzt" width="100">申请单状态</th>
+				<th field="kcdw" width="150">勘查单位</th>
+				<th field="kczgzh" width="200">勘查资格证号</th>
+				<th field="kcdwdz" width="200">勘查单位地址</th>
+				<th field="sqsj" width="100">申请时间</th>
 			</tr>
 		</thead>
 		<tbody>
 		</tbody>
 	</table>
+	<input type="text" style="display:none" id="selectedId" onclick="$('#tt').datagrid('reload')"/>
 </body>
 </html>

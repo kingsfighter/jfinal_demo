@@ -26,7 +26,7 @@
 					data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">探矿申请单列表</a> 
 				<a href="javascript:void(0)"
 					class="easyui-linkbutton" onclick="addTab('新建','/tkxt/showXinjianPage')" style="width: 100%" data-options="iconCls:'icon-large-shapes',size:'large',iconAlign:'top'">Shapes</a>
-				<a href="javascript:void(0)" class="easyui-linkbutton" style="width: 100%"
+				<a href="javascript:void(0)" onclick="addTab('变更','/tkxt/showBianGengPage')" class="easyui-linkbutton" style="width: 100%"
 					data-options="iconCls:'icon-large-smartart',size:'large',iconAlign:'top'">SmartArt</a> 
 				<a href="javascript:void(0)"
 					class="easyui-linkbutton" style="width: 100%" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">Chart</a>

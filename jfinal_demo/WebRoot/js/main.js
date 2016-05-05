@@ -5,14 +5,26 @@
  * @param url
  */
 function addTab(title, url) {
+	if("新建" != title && "列表" != title){
+		var id = $("iframe")[0].contentWindow.$("#selectedId").val();
+		if(null == id){
+			$.messager.alert('警告', '请选择要操作的申请单!', 'error');
+			return false;
+		}
+		url += "?id=" + id;
+	}
 	if ($('#tt').tabs('exists', title)) {
 		$('#tt').tabs('select', title);
 	} else {
-		var content = '<iframe scrolling="auto" frameborder="0"  src="' + url + '" style="width:100%;height:100%;"></iframe>';
+		var content = '<iframe scrolling="auto" id=\"'+ title +'\" frameborder="0"  src="' + url + '" style="width:100%;height:100%;"></iframe>';
+		var closable = true;
+		if( "列表" == title){
+			closable = false;
+		}
 		$('#tt').tabs('add', {
 			title : title,
 			content : content,
-			closable : true
+			closable : closable
 		});
 	}
 }
@@ -53,7 +65,8 @@ function submitForm() {
 					title : '成功 ',
 					msg : '提交表单成功'
 				});
-				$('#dlg').window('close');
+				clearForm();
+				var id = $("iframe")[0].contentWindow.$("#selectedId").click();
 			} else {
 				parent.$.messager.alert('警告', '提交表单失败!', 'error');
 			}
