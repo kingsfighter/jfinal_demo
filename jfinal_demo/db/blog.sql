@@ -32,10 +32,12 @@ CREATE TABLE `user` (
 INSERT INTO `user` VALUES ('1', 'admin', 'admin','管理员','男','admin@test.com','我是管理员');
 commit;
 
+drop table tksqd;
 /*tan kuang shen qing dan */
 CREATE TABLE `tksqd` (
   /*xin li*/
   `id` int(11) NOT NULL auto_increment,
+  `sqdzt` varchar(100) NULL,
   `xmmc` varchar(100) NULL,
   `sqr` varchar(50) NULL,
   `kcdw` varchar(100) NULL,

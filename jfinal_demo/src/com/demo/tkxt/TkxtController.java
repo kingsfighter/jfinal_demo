@@ -1,0 +1,29 @@
+package com.demo.tkxt;
+
+import com.demo.common.model.Tksqd;
+import com.demo.util.EasyuiUtil;
+import com.jfinal.core.Controller;
+import com.jfinal.plugin.activerecord.Page;
+
+/**
+ * UserController 所有 sql 与业务逻辑写在 Model 或 Service 中，不要写在 Controller 中，养成好习惯，有利于大型项目的开发与维护
+ */
+public class TkxtController extends Controller {
+    public void index() {
+        render("tksqd_list.jsp");
+    }
+
+    public void list() {
+        Page<Tksqd> page = Tksqd.dao.paginate(getParaToInt(0, 1), 10);
+        renderJson(EasyuiUtil.adapterEasyuiPage(page));
+    }
+
+    public void showListPage() {
+        render("tksqd_list.jsp");
+    }
+    
+    public void showXinjianPage() {
+        render("tksqd_xinjian.jsp");
+    }
+    
+}

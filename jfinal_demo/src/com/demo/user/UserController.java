@@ -1,12 +1,10 @@
 package com.demo.user;
 
-import com.demo.common.model.Blog;
 import com.demo.common.model.User;
 import com.demo.common.result.Result;
 import com.demo.util.EasyuiUtil;
 import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
-import com.jfinal.json.Json;
 import com.jfinal.kit.JsonKit;
 import com.jfinal.plugin.activerecord.Page;
 

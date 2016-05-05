@@ -8,7 +8,6 @@
 			<param-value>com.demo.common.config.DemoConfig</param-value>
 		</init-param>
 	</filter>
-	
 	<filter-mapping>
 		<filter-name>jfinal</filter-name>
 		<url-pattern>/*</url-pattern>

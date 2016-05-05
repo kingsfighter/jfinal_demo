@@ -11,7 +11,7 @@
 <script type="text/javascript" src="../../../js/user/user.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>新增用户</title>
-</head> 
+</head>
 <body>
 	<div style="width:90%">
 		<form id="fm" method="post" name="fm" action="user/add">
