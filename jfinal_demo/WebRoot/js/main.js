@@ -47,7 +47,6 @@ function submitForm() {
 	$('#fm').form('submit', {
 		dataType : 'json',
 		success : function(data) {
-			alert(data);
 			data = $.parseJSON(data);
 			if (data.success) {
 				parent.$.messager.show({
