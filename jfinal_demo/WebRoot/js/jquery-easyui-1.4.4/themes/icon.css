@@ -94,3 +94,32 @@
 .icon-large-chart{
 	background:url('icons/large_chart.png') no-repeat center center;
 }
+/* myself icons*/
+.icon-large-xinli{
+	background:url('icons/新立.png') no-repeat center center;
+}
+.icon-large-biangeng{
+	background:url('icons/变更.png') no-repeat center center;
+}
+.icon-large-zhuxiao{
+	background:url('icons/注销.png') no-repeat center center;
+}
+.icon-large-zhuanrang{
+	background:url('icons/转让.png') no-repeat center center;
+}
+.icon-large-didiao{
+	background:url('icons/地调.png') no-repeat center center;
+}
+.icon-large-nianjian{
+	background:url('icons/年检.png') no-repeat center center;
+}
+.icon-large-bangzhu{
+	background:url('icons/帮助.png') no-repeat center center;
+}
+.icon-large-tuichu{
+	background:url('icons/退出.png') no-repeat center center;
+}
+.icon-large-chaxun{
+	background:url('icons/查询.png') no-repeat center center;
+}
+

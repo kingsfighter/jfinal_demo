@@ -21,7 +21,7 @@
 	}); 
 </script>
 </head>
-<body>
+<body  style="background-image:url(../../../img/1.jpg);">
 	<table id="tt" class="easyui-datagrid" style="width: 95%; height: auto;" singleSelect="true" url="/tkxt/list" rownumbers="true" pagination="true">
 		<thead>
 			<tr>

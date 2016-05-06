@@ -24,6 +24,8 @@ public class TkxtController extends Controller {
         render("tksqd_list.jsp");
     }
     
+    
+    //-----------新立
     public void showXinjianPage() {
         render("tksqd_xinjian.jsp");
     }
@@ -34,7 +36,7 @@ public class TkxtController extends Controller {
     	tksqd.save();
         renderText(JsonKit.toJson(new Result()));
     }
-    
+    //-----------变更
     public void showBianGengPage() {
     	setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
         render("tksqd_biangeng.jsp");
@@ -47,4 +49,60 @@ public class TkxtController extends Controller {
         renderText(JsonKit.toJson(new Result()));
     }
     
+    //-----------注销
+    public void showZhuXiaoPage() {
+        setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
+        render("tksqd_zhuxiao.jsp");
+    }
+    
+    public void zhuxiao() {
+        Tksqd tksqd = getModel(Tksqd.class);
+        tksqd.setSqdzt("注销");
+        tksqd.update();
+        renderText(JsonKit.toJson(new Result()));
+    }
+    
+    //-----------转让
+    public void showZhuanRangPage() {
+        setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
+        render("tksqd_zhuanrang.jsp");
+    }
+    
+    public void zhuanrang() {
+        Tksqd tksqd = getModel(Tksqd.class);
+        tksqd.setSqdzt("转让");
+        tksqd.update();
+        renderText(JsonKit.toJson(new Result()));
+    }
+    
+    //-----------地调
+    public void showDiDiaoPage() {
+        setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
+        render("tksqd_didiao.jsp");
+    }
+    
+    public void didiao() {
+        Tksqd tksqd = getModel(Tksqd.class);
+        tksqd.setSqdzt("地调");
+        tksqd.update();
+        renderText(JsonKit.toJson(new Result()));
+    }
+    
+    //-----------年检
+    public void showNianJianPage() {
+        setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
+        render("tksqd_nianjian.jsp");
+    }
+    
+    public void nianjian() {
+        Tksqd tksqd = getModel(Tksqd.class);
+        tksqd.setSqdzt("年检");
+        tksqd.update();
+        renderText(JsonKit.toJson(new Result()));
+    }
+    
+    //-----------帮助
+    public void showBangZhuPage() {
+        render("tksqd_bangzhu.jsp");
+    }
 }
