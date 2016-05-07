@@ -16,7 +16,9 @@
 			 onClickRow: function(index, data) {
 		            var row = $('#tt').datagrid('getSelected');
 		            $("#selectedId").val(row.id);
-			 }
+			 },onLoadSuccess: function(data){
+			        $("#selectedId").val("");
+			    }
 		 });
 	}); 
 </script>

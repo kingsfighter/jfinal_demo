@@ -65,10 +65,6 @@
 	    		</tr>
 	    	</table>
 		</form>
-		<div style="text-align:center;padding:5px">
-	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交申请</a>
-	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
-	    </div>
 	</div>
 
 </body>
