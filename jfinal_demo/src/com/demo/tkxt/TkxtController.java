@@ -36,6 +36,13 @@ public class TkxtController extends Controller {
     	tksqd.save();
         renderText(JsonKit.toJson(new Result()));
     }
+    
+    //-----------查看
+    public void showChaKanPage() {
+        setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));
+        render("tksqd_chakan.jsp");
+    }
+    
     //-----------变更
     public void showBianGengPage() {
     	setAttr("tksqd", Tksqd.dao.findById(getParaToInt("id")));

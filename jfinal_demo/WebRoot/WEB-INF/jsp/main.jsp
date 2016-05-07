@@ -32,6 +32,8 @@
 				<a href="javascript:void(0)"
 					class="easyui-linkbutton" onclick="addTab('新建','/tkxt/showXinjianPage')" style="width: 100%" 
 					data-options="iconCls:'icon-large-xinli',size:'large',iconAlign:'top'">新立</a>
+				<a href="javascript:void(0)"
+					class="easyui-linkbutton" onclick="addTab('查看','/tkxt/showChaKanPage')" style="width: 100%" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">查看</a>
 				<a href="javascript:void(0)" onclick="addTab('变更','/tkxt/showBianGengPage')" class="easyui-linkbutton" style="width: 100%"
 					data-options="iconCls:'icon-large-biangeng',size:'large',iconAlign:'top'">变更</a> 
 				<a href="javascript:void(0)" onclick="addTab('注销','/tkxt/showZhuXiaoPage')" class="easyui-linkbutton" style="width: 100%"

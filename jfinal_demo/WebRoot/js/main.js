@@ -7,7 +7,7 @@
 function addTab(title, url) {
 	if ("新建" != title && "列表" != title) {
 		var id = $("iframe")[0].contentWindow.$("#selectedId").val();
-		if (null == id) {
+		if (null == id || "" == id) {
 			$.messager.alert('警告', '请选择要操作的申请单!', 'error');
 			return false;
 		}
