@@ -26,7 +26,7 @@
 	<div data-options="region:'north',border:false" style="height: 60px; background: #B3DFDA; padding: 10px">探矿管理系统</div>
 	<input type="hidden" id="login" value="<%=session.getAttribute("login")%>"></input>
 	<div data-options="region:'west',split:true,title:'菜单'" style="width: 150px; padding: 10px;">
-		<div class="easyui-accordion" data-options="fit:true,border:false">
+		<div class="easyui-accordion" data-options="fit:true,border:false" style="overflow:scroll">
 				<a href="javascript:void(0)" onclick="addTab('列表','/tkxt/showListPage')" class="easyui-linkbutton" style="width: 100%"
 					data-options="iconCls:'icon-large-chaxun',size:'large',iconAlign:'top'">探矿申请单列表</a> 
 				<a href="javascript:void(0)"
@@ -49,7 +49,7 @@
 		</div>
 	</div>
 
-	<div data-options="region:'south',border:false" style="height: 50px; background: #A9FACD; padding: 10px;">©版权所有</div>
+	<div data-options="region:'south',border:false" style="height: 50px; background: #A9FACD; padding: 10px;"></div>
 
 	<div data-options="region:'center',title:' '">
 		<div class="easyui-tabs" data-options="fit:true,border:false,plain:true" id="tt">
