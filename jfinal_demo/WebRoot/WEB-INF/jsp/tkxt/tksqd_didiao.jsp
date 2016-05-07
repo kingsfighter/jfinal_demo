@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div style="width:90%">
-		<form id="fm" method="post" name="fm" action="biangeng">
+		<form id="fm" method="post" name="fm" action="didiao">
 			<table cellpadding="5">
 				<tr>
 	    			<td colspan=6 align="center"  style="font-weight:bold;font-size:20px;">探矿权申请</td>
