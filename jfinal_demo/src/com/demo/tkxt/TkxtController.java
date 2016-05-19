@@ -16,7 +16,13 @@ public class TkxtController extends Controller {
     }
 
     public void list() {
-        Page<Tksqd> page = Tksqd.dao.paginate(getParaToInt(0, 1), 10);
+        Page<Tksqd> page = null;
+        String sqdzt = getPara("sqdzt");
+        if(null == sqdzt || "".trim().equals(sqdzt)){
+           page = Tksqd.dao.paginate(getParaToInt(0, 1), 10);
+        }else{
+            page = Tksqd.dao.paginateBySqdzt(getParaToInt(0, 1), 10, sqdzt);
+        }
         renderJson(EasyuiUtil.adapterEasyuiPage(page));
     }
 
