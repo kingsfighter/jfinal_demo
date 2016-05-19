@@ -21,9 +21,28 @@
 			    }
 		 });
 	}); 
+	
+	function search(){
+		$('#tt').datagrid('load',{  
+			sqdzt:$('#sqdzt').val() 
+            }); 
+	}
 </script>
 </head>
 <body  style="background-image:url(../../../img/1.jpg);">
+	<div>
+	<select id="sqdzt" name="sqdzt">
+		<option value="">==请选择==</option>
+		<option value="新立">新立</option>
+		<option value="变更">变更</option>
+		<option value="注销">注销</option>
+		<option value="转让">转让</option>
+		<option value="地调">地调</option>
+		<option value="年检">年检</option>
+	</select>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" value="查 询" onclick="search()">
+	</div>
 	<table id="tt" class="easyui-datagrid" style="width: 95%; height: auto;" singleSelect="true" url="/tkxt/list" rownumbers="true" pagination="true">
 		<thead>
 			<tr>
